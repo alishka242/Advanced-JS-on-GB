@@ -1,0 +1,47 @@
+@import "../constants/colorAndFlex";
+
+footer {
+    height: 79px;
+    background-color: #e6e6e6;
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 79px;
+        p{
+            a {
+                color: $moreTextColor;
+                font-size: 16px;
+                font-weight: 400;
+                letter-spacing: 0.4px;
+                &:hover {
+                    color: $darkGray;
+                }
+            }
+        }
+        .footer-link {
+            width: 191px;
+            height: 32px;
+            @extend .flexRowJusti;
+            a {
+                height: 16px;
+                color: $moreTextColor;
+                font-size: 16px;
+                font-weight: 400;
+                i {
+                    width: 32px;
+                    height: 32px;
+                    background-color: $lightBckgColor;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    &:hover {
+                        color: $lightBckgColor;
+                        background-color: $baseBtnColor;
+                    }
+                }
+            }
+        }
+    }
+}

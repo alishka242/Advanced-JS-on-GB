@@ -1,0 +1,343 @@
+.shopping-cart {
+    input {
+        outline: none;
+        border: none;
+    }
+    
+    .way {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 148px;
+        margin-bottom: 90px;
+    }
+    
+    .way_background {
+        background-color: #f8f3f4;
+    }
+    
+    .way h2 {
+        color: $baseBtnColor;
+        font-size: 24px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    
+    .way h3 {
+        color: $darkGray;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20px;
+        text-transform: uppercase;
+    }
+    
+    .way h3 span {
+        color: $baseBtnColor;
+    }
+    
+    main {
+        height: 504px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-bottom: 1px solid #e8e8e8;
+    }
+    
+    .category {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: $baseTextColor;
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: -0.2px;
+        width: 100%;
+    }
+    
+    .category div {
+        width: 600px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .category h4 {
+        width: 110px;
+        text-align: right;
+    }
+    
+    .clothes-link {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 278px;
+    }
+    
+    .clothes-link img {
+        width: 100px;
+        height: 115px;
+    }
+    
+    .clothes-feature {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .clothes-feature div {
+        margin-top: 38px;
+    }
+    
+    .clothes-feature div p {
+        width: 75px;
+        height: 20px;
+        margin: 0;
+        color: #575757;
+        font-weight: 400;
+        font-size: 13px;
+    }
+    
+    .clothes-feature div p span {
+        font-weight: 300;
+    }
+    
+    .row {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #efefef;
+    }
+    
+    .row h4 {
+        color: $baseTextColor;
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: -0.2px;
+    }
+    
+    .row__item {
+        display: flex;
+        align-items: center;
+        flex: 4 0 0;
+    }
+    
+    .row__item2 {
+        flex: 1 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .row__item2 a i:hover {
+        color: $baseBtnColor;
+    }
+    
+    .row__item2 i {
+        height: 15px;
+        color: #c0c0c0;
+    }
+    
+    .price {
+        color: #656565;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+    
+    .clothes-link a:hover {
+        opacity: 0.5;
+    }
+    
+    .clothes-link a:active {
+        opacity: 0.9;
+    }
+    
+    /*form-shop*/
+    .shopping-link {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-transform: uppercase;
+        color: $darkGray;
+        font-size: 14px;
+        font-weight: 700;
+        margin-top: 45px;
+        margin-bottom: 63px;
+    }
+    
+    .shopping-link a {
+        width: 225px;
+        height: 50px;
+        border: 1px solid $borderColor;
+        background-color: $lightBckgColor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .shopping-link a:hover {
+        background-color: $baseBtnColor;
+    }
+    
+    .shopping-link a:active {
+        color: #f5f3f3;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 80px;
+    }
+    
+    form h3 {
+        color: $baseTextColor;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    
+    .adress {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 268px;
+    }
+    
+    .adress input {
+        width: 355px;
+        height: 45px;
+        border: 1px solid $borderColor;
+        background-color: $lightBckgColor;
+        color: #b1b1b1;
+        font-size: 13px;
+        font-weight: 300;
+        padding-left: 18px;
+    }
+    
+    .adress a {
+        width: 100px;
+        height: 35px;
+        border: 1px solid $borderColor;
+        background-color: $lightBckgColor;
+        color: $darkGray;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .adress a:hover {
+        background-color: $baseBtnColor;
+    }
+    
+    .adress a:active {
+        color: #f5f3f3;
+    }
+    
+    .coupon {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 184px;
+        outline: none;
+        border: none;
+    }
+    
+    .coupon p {
+        color: #000000;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    
+    .coupon input {
+        width: 355px;
+        height: 45px;
+        border: 1px solid $borderColor;
+        background-color: $lightBckgColor;
+        color: #b1b1b1;
+        font-size: 13px;
+        font-weight: 300;
+        padding-left: 18px;
+    }
+    
+    .coupon a {
+        width: 118px;
+        height: 35px;
+        border: 1px solid $borderColor;
+        background-color: $lightBckgColor;
+        color: $darkGray;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .coupon a:hover {
+        background-color: $baseBtnColor;
+    }
+    
+    .coupon a:active {
+        color: #f5f3f3;
+    }
+    
+    .total {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 317px;
+        height: 132px;
+        background-color: #f5f3f3;
+        padding-top: 40px;
+        padding-bottom: 42px;
+        padding-right: 42px;
+    }
+    
+    .total p {
+        color: $darkGray;
+        font-size: 11px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    
+    .total h3 {
+        color: $baseTextColor;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        border-bottom: 1px solid #ebeaea;
+        padding-bottom: 22px;
+        width: 273px;
+        text-align: right;
+    }
+    
+    .total h3 span {
+        color: $baseBtnColor;
+    }
+    
+    .total button {
+        width: 273px;
+        height: 50px;
+        background-color: $baseBtnColor;
+        color: $lightBckgColor;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        outline: none;
+        border: none;
+    }
+    
+    .total button:active{
+        outline: none;
+        border: none;
+    }
+}

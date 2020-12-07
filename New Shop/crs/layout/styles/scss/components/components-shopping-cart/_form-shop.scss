@@ -1,0 +1,192 @@
+.shopping-link-cart {
+    .shopping-link {
+        @extend .flexRowJusti;
+        color: $darkGray;
+        font-size: 14px;
+        font-weight: 700;
+        margin-top: 45px;
+        margin-bottom: 63px;
+        outline: none;
+
+        a {
+            width: 225px;
+            height: 50px;
+            border: 1px solid $borderColor;
+            background-color: $lightBckgColor;
+            color: $baseTextColor;
+            @extend .flexJustAlignCenter;
+            flex-direction: row;
+            text-transform: uppercase;
+
+            &:hover {
+                background-color: #c7c7c7;
+                color: #f5f3f3;
+            }
+
+            &:active {
+                color: $lightTextColor;
+            }
+        }
+    }
+
+
+    form {
+        @extend .flexRowJusti;
+        margin-bottom: 80px;
+
+        .adress {
+            @extend .flexColumnJusti;
+            height: 268px;
+
+            h3 {
+                color: $baseTextColor;
+                font-size: 16px;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+
+            input {
+                width: 355px;
+                height: 45px;
+                border: 1px solid $baseFooterColor;
+                background-color: $lightBckgColor;
+                color: $lightGray;
+                font-size: 13px;
+                font-weight: 300;
+                padding-left: 18px;
+
+                &:focus {
+                    outline: $baseFooterColor;
+                }
+            }
+
+            a {
+                width: 100px;
+                height: 35px;
+                border: 1px solid $baseFooterColor;
+                background-color: $lightBckgColor;
+                color: $darkGray;
+                font-size: 11px;
+                font-weight: 700;
+                text-transform: uppercase;
+                @extend .flexJustAlignCenter;
+
+                &:hover {
+                    background-color: #c7c7c7;
+                    color: #f5f3f3;
+                }
+
+                &:active {
+                    color: #f5f3f3;
+                }
+            }
+        }
+
+        .coupon {
+            @extend .flexColumnJusti;
+            height: 184px;
+            outline: none;
+            border: none;
+
+            h3 {
+                text-transform: uppercase;
+            }
+
+            p {
+                color: $baseTextColor;
+                font-size: 14px;
+                font-weight: 300;
+            }
+
+            input {
+                width: 355px;
+                height: 45px;
+                border: 1px solid $baseFooterColor;
+                background-color: $lightBckgColor;
+                color: $backgHoverGray;
+                font-size: 13px;
+                font-weight: 300;
+                padding-left: 18px;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            a {
+                width: 118px;
+                height: 35px;
+                border: 1px solid $baseFooterColor;
+                background-color: $lightBckgColor;
+                color: $darkGray;
+                font-size: 11px;
+                font-weight: 700;
+                text-transform: uppercase;
+                @extend .flexJustAlignCenter;
+
+                &:hover {
+                    background-color: #c7c7c7;
+                    color: #f5f3f3;
+                }
+
+                &:active {
+                    color: $lightTextColor;
+                }
+            }
+        }
+    }
+
+    .total {
+        @extend .flexColumnJusti;
+        align-items: flex-end;
+        width: 317px;
+        height: 132px;
+        background-color: #f5f3f3;
+        padding-top: 40px;
+        padding-bottom: 42px;
+        padding-right: 42px;
+
+        p {
+            color: $darkGray;
+            font-size: 11px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            color: $baseTextColor;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-bottom: 1px solid $baseFooterColor;
+            padding-bottom: 22px;
+            width: 273px;
+            text-align: right;
+
+            span {
+                color: $baseBtnColor;
+            }
+        }
+
+        button {
+            width: 273px;
+            height: 50px;
+            background-color: $baseBtnColor;
+            color: $lightBckgColor;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            outline: none;
+            border: none;
+
+            &:hover {
+                background-color: #c7c7c7;
+            }
+
+            &:active {
+                outline: none;
+                border: none;
+            }
+        }
+    }
+}

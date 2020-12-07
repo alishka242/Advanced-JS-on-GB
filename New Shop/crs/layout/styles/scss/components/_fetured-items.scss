@@ -1,0 +1,134 @@
+.fetured-items-conteuner {
+    @extend .flexColumn;
+    margin-top: 119px;
+
+    .fetured-items {
+        @extend .flexColumn;
+        height: 51px;
+        margin-bottom: 60px;
+
+        h3 {
+            color: $baseTextColor;
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        p {
+            color: $moreTextColor;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+
+    .ftr-product {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-between;
+        margin-bottom: 80px;
+
+        .clothes {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 20px;
+
+            .clother_photo {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 280px;
+                width: 263px;
+                text-transform: uppercase;
+                width: 260px;
+                height: 280px;
+
+                img {
+                    display: block;
+                    z-index: 0;
+                    width: 260px;
+                    height: 280px;
+                }
+
+                .ftr-product_hover {
+                    position: absolute;
+                    display: none;
+                    width: 260px;
+                    height: 281px;
+                    background-color: $darkGray;
+                    color: $lightBckgColor;
+                    font-size: 13px;
+                    font-weight: 400;
+                    opacity: 0.8;
+
+                    button {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 123px;
+                        height: 37px;
+                        border: 1px solid $lightBckgColor;
+                        text-transform: lowercase;
+
+                        &:hover {
+                            background-color: $baseFooterColor;
+                            color: $darkGray;
+                        }
+                    }
+                }
+            }
+
+            .clothers-p {
+                .ftr-name {
+                    color: $baseTextColor;
+                    font-size: 13px;
+                    margin-top: 19px;
+                }
+
+                .ftr-price {
+                    color: $baseBtnColor;
+                    font-size: 16px;
+                }
+            }
+
+            p, a {
+                display: block;
+                font-weight: 700;
+                margin-bottom: 20px;
+                margin-left: 15px;
+            }
+
+            &:hover .ftr-product_hover {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &:hover .clothers-p {
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+
+    .all-products {
+        @extend .flexJustAlignCenter;
+
+        a {
+            @extend .flexJustAlignCenter;
+            width: 212px;
+            height: 48px;
+            background-color: $baseBtnColor;
+            color: $lightBckgColor;
+            font-size: 15px;
+            font-weight: 400;
+            margin-bottom: 113px;
+
+            &:hover {
+                background-color: $backgHoverGray;
+            }
+        }
+    }
+}
+
+.container {
+    padding: 0px;
+}
