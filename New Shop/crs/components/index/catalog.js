@@ -57,7 +57,7 @@ class Card {
         this.productName = prName;
         this.productPrice = prPrice;
     }
-    template() {
+    getTemplate() {
         return `
         <div class="clothes">
         <div class="clother_photo">
@@ -82,7 +82,7 @@ class Catalog {
     constructor() {
         this.list = [];
     }
-    fetchList() {
+    fetchProductArr() {
         this.list = [{
                 "productName": "MANGO PEOPLE T-SHIRT",
                 "productPrice": 52,
@@ -137,7 +137,7 @@ class Catalog {
         let template = '';
         this.list.forEach(i => {
             const listItem = new Card(i.productImg, i.productId, i.productName, i.productPrice);
-            template += listItem.template();
+            template += listItem.getTemplate();
         })
         document.querySelector('#catalog').innerHTML = template;
     }
