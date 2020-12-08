@@ -315,8 +315,7 @@
     //     basket.init();
 
         let catalog = new Catalog();
-        catalog.fetchProductArr();
-        catalog.render();
+        catalog.fetchProductArr().then(() => catalog.render());
     </script>
 </body>
 

@@ -79,64 +79,24 @@ class Card {
 
 
 class Catalog {
-    constructor() {
-        this.productList = [];
-    }
+    productList = []
+
     fetchProductArr() {
-        this.productList = [{
-                "productName": "MANGO PEOPLE T-SHIRT",
-                "productPrice": 52,
-                "productImg": "https://raw.githubusercontent.com/alishka242/static/master/IMG/fetured_1.jpg",
-                "productId": "prod_0"
-            },
-            {
-                "productName": "BANANA PEOPLE T-SHIRT",
-                "productPrice": 53,
-                "productImg": "https://raw.githubusercontent.com/alishka242/static/master/IMG/fetured_2.jpg",
-                "productId": "prod_1"
-            },
-            {
-                "productName": "STRAWBERRY PEOPLE T-SHIRT",
-                "productPrice": 55,
-                "productImg": "https://raw.githubusercontent.com/alishka242/static/master/IMG/fetured_3.jpg",
-                "productId": "prod_2"
-            },
-            {
-                "productName": "ORANGE PEOPLE T-SHIRT",
-                "productPrice": 67,
-                "productImg": "https://raw.githubusercontent.com/alishka242/static/master/IMG/fetured_4.jpg",
-                "productId": "prod_3"
-            },
-            {
-                "productName": "PUMKIN PEOPLE T-SHIRT",
-                "productPrice": 69,
-                "productImg": "https://raw.githubusercontent.com/alishka242/static/master/IMG/fetured_5.jpg",
-                "productId": "prod_4"
-            },
-            {
-                "productName": "PINEAPPLE PEOPLE T-SHIRT",
-                "productPrice": 94,
-                "productImg": "https://raw.githubusercontent.com/alishka242/static/master/IMG/fetured_6.jpg",
-                "productId": "prod_5"
-            },
-            {
-                "productName": "CUCUMBER PEOPLE T-SHIRT",
-                "productPrice": 23,
-                "productImg": "https://raw.githubusercontent.com/alishka242/static/master/IMG/fetured_7.jpg",
-                "productId": "prod_6"
-            },
-            {
-                "productName": "TOMATO PEOPLE T-SHIRT",
-                "productPrice": 45,
-                "productImg": "https://raw.githubusercontent.com/alishka242/static/master/IMG/fetured_8.jpg",
-                "productId": "prod_7"
-            }
-        ]
+        const BASE_URL = "https://raw.githubusercontent.com/alishka242/static/master/JSON";
+
+        return fetch(`${BASE_URL}/catalog.json`)
+            .then((r) => r.json())
+            .then((r) => {
+                this.productList = r;
+            })
+            .catch(() => {
+                return null;
+            });
     }
     render() {
         const template = this.productList
-        .map((i) => new Card(i.productImg, i.productId, i.productName, i.productPrice).getTemplate())
-        .join("");
+            .map((i) => new Card(i.productImg, i.productId, i.productName, i.productPrice).getTemplate())
+            .join("");
         document.querySelector('#catalog').innerHTML = template;
     }
     // как слушатель собития задавать в классах?
