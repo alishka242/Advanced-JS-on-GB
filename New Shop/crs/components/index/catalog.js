@@ -80,10 +80,10 @@ class Card {
 
 class Catalog {
     constructor() {
-        this.list = [];
+        this.productList = [];
     }
     fetchProductArr() {
-        this.list = [{
+        this.productList = [{
                 "productName": "MANGO PEOPLE T-SHIRT",
                 "productPrice": 52,
                 "productImg": "https://raw.githubusercontent.com/alishka242/static/master/IMG/fetured_1.jpg",
@@ -135,9 +135,9 @@ class Catalog {
     }
     render() {
         let template = '';
-        this.list.forEach(i => {
-            const listItem = new Card(i.productImg, i.productId, i.productName, i.productPrice);
-            template += listItem.getTemplate();
+        this.productList.forEach(i => {
+            const card = new Card(i.productImg, i.productId, i.productName, i.productPrice);
+            template += card.getTemplate();
         })
         document.querySelector('#catalog').innerHTML = template;
     }
