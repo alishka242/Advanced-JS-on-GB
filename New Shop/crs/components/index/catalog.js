@@ -134,11 +134,9 @@ class Catalog {
         ]
     }
     render() {
-        let template = '';
-        this.productList.forEach(i => {
-            const card = new Card(i.productImg, i.productId, i.productName, i.productPrice);
-            template += card.getTemplate();
-        })
+        const template = this.productList
+        .map((i) => new Card(i.productImg, i.productId, i.productName, i.productPrice).getTemplate())
+        .join("");
         document.querySelector('#catalog').innerHTML = template;
     }
     // как слушатель собития задавать в классах?
