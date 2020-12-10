@@ -1,0 +1,112 @@
+main {
+    height: 504px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $baseFooterColor;
+
+        h4 {
+            color: $baseTextColor;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: -0.2px;
+        }
+
+        .row__item {
+            display: flex;
+            align-items: center;
+            flex: 4 0 0;
+
+            a {
+                i:hover {
+                    color: $baseBtnColor;
+                }
+            }
+        }
+
+        .row__item2 {
+            flex: 1 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                i {
+                    height: 15px;
+                    color: $backgHoverGray;
+                }
+
+            }
+        }
+
+        .price {
+            color: $darkGray;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 20px;
+            a{
+                i{
+                    &:hover{
+                        color: $baseBtnColor;
+                    }
+                }
+            }
+        }
+    }
+    .clothes-link {
+        @extend .flexRow;
+        width: 278px;
+    
+        a {
+    
+            img {
+                width: 100px;
+                height: 115px;
+                margin-top: 22px;
+    
+            }
+    
+            &:hover {
+                opacity: 0.5;
+            }
+    
+            &:active {
+                opacity: 0.9;
+            }
+        }
+    
+        .clothes-feature {
+            @extend .flexColumnJustAround;
+    
+            h4 {
+                a {
+                    color: $baseTextColor;
+                }
+            }
+    
+            div {
+                margin-top: 38px;
+    
+                p {
+                    width: 75px;
+                    height: 20px;
+                    margin: 0;
+                    color: $darkGray;
+                    font-weight: 400;
+                    font-size: 13px;
+    
+                    span {
+                        font-weight: 300;
+                        color: $lightGray;
+                    }
+                }
+            }
+        }
+    }
+}

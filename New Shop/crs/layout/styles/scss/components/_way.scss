@@ -1,0 +1,62 @@
+@import "../constants/colorAndFlex";
+
+.way_background {
+    background-color: #f8f3f4;
+    @keyframes hanger {
+        0% {
+            left: 0px;
+            top: 20px;
+        }
+
+        30% {
+            left: 300px;
+            top: 80px;
+        }
+
+        60% {
+            left: 700px;
+            top: 20px;
+        }
+
+        100% {
+            left: 1050px;
+            top: 80px;
+        }
+    }
+    
+    .way {
+        @extend .flexRow;
+        height: 148px;
+        margin-bottom: 90px;
+        position: relative;
+
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100px;
+            z-index: 0;
+            animation: hanger  5s infinite alternate;
+        }
+
+        h2 {
+            color: $baseBtnColor;
+            font-size: 24px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            color: #636363;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 20px;
+            text-transform: uppercase;
+
+            span {
+                color: $baseBtnColor;
+            }
+        }
+    }
+
+}

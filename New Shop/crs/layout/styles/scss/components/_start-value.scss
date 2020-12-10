@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto-Regular', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+button:active,
+a:active {
+    opacity: 0.8;
+}
+
+button:focus,
+button:active {
+    outline: none;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1145px;
+}

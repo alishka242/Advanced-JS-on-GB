@@ -1,0 +1,44 @@
+@import "../../constants/colorAndFlex";
+
+.container_color {
+    background-color: #e8e8e8;
+    .the-brand {
+        height: 613px;
+        background-image: url('../../../accets/img/2_the-brand/the-brand.png'); 
+        background-position: right;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        .color-line {
+            width: 12px;
+            height: 95px;
+            background-color: $baseBtnColor;
+            margin-right: 12px;
+        }
+        .brand-text {
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-top: -24px;
+            h1 {
+                color: $baseTextColor;
+                font-size: 60px;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+            h2 {
+                font-size: 40px;
+                .brand-h2_color {
+                    color: $baseBtnColor;
+                }
+            }
+        }
+        img{
+            height: 40px;
+        }
+    }
+}

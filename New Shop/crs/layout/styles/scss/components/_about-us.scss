@@ -1,0 +1,61 @@
+@import "../constants/colorAndFlex";
+
+.about-us {
+    @extend .flexRowJusti;
+    height: 260px;
+    margin-top: 109px;
+    margin-bottom: 89px;
+
+    .about-us-text {
+        @extend .flexColumnJustAround;
+        width: 446px;
+        letter-spacing: 0.35px;
+        @import "../constants/logo";
+
+        p {
+            color: $moreTextColor;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 24px;
+            letter-spacing: 0.35px;
+        }
+    }
+
+    .nav-about-us {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 608px;
+
+        .about-us-information {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            h3 {
+                a {
+                    color: $baseBtnColor;
+                    font-size: 18px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 0.45px;
+
+                    &:hover {
+                        color: $moreTextColor;
+                    }
+                }
+            }
+
+            a {
+                color: #898989;
+                font-size: 16px;
+                font-weight: 400;
+
+                &:hover {
+                    color: $baseBtnColor;
+                }
+            }
+
+        }
+    }
+}

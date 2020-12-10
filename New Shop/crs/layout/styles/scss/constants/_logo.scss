@@ -1,0 +1,20 @@
+.logo {
+    height: 51px;
+    width: 165px;
+
+    a {
+        @extend .flexRow;
+
+        span {
+            font-size: 27px;
+            font-weight: inherit;
+            color: $baseTextColor;
+            display: inline-block;
+
+            .logo-text_color {
+                font-weight: 700;
+                color: $baseBtnColor;
+            }
+        }
+    }
+}

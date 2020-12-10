@@ -1,0 +1,219 @@
+a {
+    &:hover {
+        text-decoration: none;
+        border: none;
+    }
+}
+
+main {
+    background-color: #f7f7f7;
+
+    .carousel-item {
+
+        img {
+            width: 597px !important;
+            height: 724px;
+        }
+    }
+
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    height: 1280px;
+
+
+
+}
+
+.product-description {
+    position: absolute;
+    top: -80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1142px;
+    height: 730px;
+    padding: 0px 250px;
+    margin: 0px;
+    border: 1px solid $baseFooterColor;
+    background-color: $lightBckgColor;
+
+    .pr-desc-header {
+        height: 180px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 73px 0px 67px;
+
+        h4 {
+            margin-bottom: 14px;
+            color: $baseBtnColor;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+
+        h3 {
+            color: $darkGray;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 24px;
+            margin: 0px;
+            margin-top: 17px;
+            text-transform: uppercase;
+        }
+
+    }
+
+    p {
+        color: $darkGray;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 24px;
+        text-align: center;
+        width: 618px;
+    }
+
+
+    .single-paggination {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+
+        .sing-pr-desc-line_slim {
+            width: 74px;
+            height: 1px;
+            background-color: $baseFooterColor;
+            display: flex;
+            justify-content: center;
+            outline: none;
+
+            &:hover {
+                background-color: $darkGray;
+            }
+        }
+
+        .sing-pr-desc-line_bold {
+            position: absolute;
+            height: 3px;
+            width: 63px;
+            background-color: $baseBtnColor;
+            left: 42px;
+        }
+
+    }
+
+    .single-pr-desc-charact-up {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 334px;
+
+        p {
+            color: $moreTextColor;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+
+            span {
+                color: $colorDarkGrayH5;
+                font-size: 14px;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    span {
+        color: $baseBtnColor;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 24px;
+        margin: 21px 0px 43px;
+    }
+
+    .single-pr-desc-line {
+        height: 1px;
+        width: 642px;
+        border: 1px solid $baseFooterColor;
+        margin-bottom: 63px;
+    }
+
+    .single-pr-desc-charact-down {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 538px;
+
+
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            h5 {
+                color: $colorDarkGrayH5;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 24px;
+                text-transform: uppercase;
+
+            }
+
+            input {
+                width: 144px;
+                height: 35px;
+                border: 1px solid $baseFooterColor;
+                background-color: $lightBckgColor;
+                padding-left: 15px;
+                outline: none;
+            }
+        }
+    }
+
+    button {
+        width: 537px;
+        height: 55px;
+        border: 1px solid $baseBtnColor;
+        background-color: $lightBckgColor;
+        color: $baseBtnColor;
+        margin-top: 28px;
+
+        &:hover {
+            background-color: $baseBtnColor;
+            color: $lightBckgColor;
+        }
+
+        &:active {
+            background-color: $darkGray;
+            border: $darkGray;
+        }
+    }
+}
+
+.single-galary {
+
+    h2 {
+        color: $darkGray;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 20px;
+        margin: 0px 0px 52px;
+        text-transform: uppercase;
+    }
+
+    .ftr-product {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+}

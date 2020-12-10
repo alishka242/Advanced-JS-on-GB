@@ -1,0 +1,37 @@
+.flexRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flexRowJusti {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flexColumnJusti {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.flexColumnJustAround {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.flexJustAlignCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

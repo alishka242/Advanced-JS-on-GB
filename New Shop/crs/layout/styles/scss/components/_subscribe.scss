@@ -1,0 +1,125 @@
+@import "../constants/colorAndFlex";
+
+.subscribe {
+    margin: 0 auto;
+    background: url(../../../accets/img/6_subscribe/subscribe.jpg) no-repeat, #ccc;
+    background-blend-mode: unset;
+    background-size: cover; 
+
+    .sbsc-content {
+        height: 438px;
+        @extend .flexRow;
+
+        .sbsc-left {
+            @extend .flexRowJusti;
+            align-items: flex-start;
+            width: 536px;
+
+            .sbsc-text {
+                width: 396px;
+                color: $baseTextColor;
+                font-size: 16px;
+                line-height: 26px;
+                margin-bottom: 19px;
+            }
+
+            .sbsc-name {
+                color: $baseBtnColor;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 26px;
+            }
+
+            .sbsc-sec-name {
+                color: $baseTextColor;
+                font-size: 12px;
+                font-weight: 300;
+                letter-spacing: 0.3px;
+                line-height: 14px;
+            }
+
+            .sbsc-line-flex {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-end;
+                width: 89px;
+                height: 45px;
+
+                .sbcs-line-left {
+                    width: 38px;
+                    height: 4px;
+                    background-color: $baseFooterColor;
+
+                    &:hover {
+                        background-color: $baseBtnColor;
+                    }
+                }
+
+                .sbcs-line-right {
+                    width: 38px;
+                    height: 4px;
+                    background-color: $baseBtnColor;
+
+                    &:hover {
+                        background-color: $baseFooterColor;
+                    }
+                }
+            }
+        }
+
+        .sbsc-center {
+            height: 100%;
+            width: 1px;
+            background-color: $lightBckgColor;
+        }
+
+        .sbsc-right {
+            h3 {
+                color: $baseTextColor;
+                font-size: 24px;
+                font-weight: 400;
+                text-transform: uppercase;
+                text-align: center;
+                line-height: 54px;
+            }
+
+            h4 {
+                font-weight: 300;
+                letter-spacing: 0.35px;
+                margin-bottom: 35px;
+                text-align: center;
+            }
+
+            input {
+                width: 282px;
+                border: none;
+                height: 46px;
+                border-radius: 50px 0px 0px 50px;
+                background-color: $baseFooterColor;
+                padding-left: 28px;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            button {
+                width: 104px;
+                border: none;
+                height: 46px;
+                border-radius: 0px 50px 50px 0px;
+                background-color: $baseBtnColor;
+                color: $lightBckgColor;
+
+                &:focus {
+                    outline: none;
+                }
+
+                &:hover {
+                    background-color: $backgHoverGray;
+                }
+            }
+        }
+    }
+}
