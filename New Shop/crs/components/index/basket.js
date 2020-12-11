@@ -104,37 +104,56 @@
 //     `
 // }
 
-// // {
-// //     /* <a href="#" class="cart_close fas fa-times-circle" name="remove" data-id="${item.productId}"></a> */ }
-
-// // начинаю переводить все на классы
-// // class Product {
-// //     constructor(img, id, name, price){
-// //         this.productImg = img;
-// //         this.productId = id;
-// //         this.productName = name;
-// //         this.productPrice = price;
-// //     }
-// //     template(){
-// //         return `
-// //         <div class="selected-item">
-// //             <a href="#"><img src="${this.productImg}" alt="photo"></a>
-// //             <div>
-// //                 <p><a href="#" class="item-name">${this.productName}</a></p>
-// //                 <p class="item-stars">
-// //                     <a href="#">
-// //                         <i class="fa fa-star" aria-hidden="true"></i>
-// //                         <i class="fa fa-star" aria-hidden="true"></i>
-// //                         <i class="fa fa-star" aria-hidden="true"></i> 
-// //                         <i class="fa fa-star" aria-hidden="true"></i>
-// //                         <i class="fa fa-star-half-o" aria-hidden="true"></i>
-// //                     </a>
-// //                 </p>
-// //                 <p class="item-price">${item.amount} x &#36; ${this.productPrice}</p>
-// //             </div>
+//начинаю переводить все на классы
+class Product {
+    constructor(img, id, name, price, amount){
+        this.productImg = img;
+        this.productId = id;
+        this.productName = name;
+        this.productPrice = price;
+        this.productAmout = amount;
+    }
+    getTemplate(){
+        return `
+        <div class="selected-item">
+            <a href="#"><img src="${this.productImg}" alt="photo"></a>
+            <div>
+                <p><a href="#" class="item-name">${this.productName}</a></p>
+                <p class="item-stars">
+                    <a href="#">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i> 
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    </a>
+                </p>
+                <p class="item-price">${this.amount} x &#36; ${this.productPrice}</p>
+            </div>
             
-// //             <a href="#" name="remove" class="fa fa-times-circle-o" data-id="${this.productId}"></a>
-// //         </div>
-// //         `
-// //     }
-// // }
+            <a href="#" name="remove" class="fa fa-times-circle-o" data-id="${this.productId}"></a>
+        </div>
+        `
+    }
+}
+
+class Basket {
+    constructor(){
+        this.productArray = [];
+    }
+    fetchProductArr(){
+        const Url = 'https://raw.githubusercontent.com/alishka242/static/master/JSON/basket.json';
+        return fetch(Url)
+            .then((r) => r.json())
+            .then((r) => {this.productArray = r.content;
+            })
+            .catch(() => {return null;})
+    }
+    render(){
+        const template = this.productArray
+            .map((i) => new Product(i.productImg, i.productId, i.productName, i.productPrice, i.amount).getTemplate())
+            .join("");
+        document.querySelector('#basket_items').innerHTML = template;
+
+    }
+}

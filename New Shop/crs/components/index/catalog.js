@@ -46,10 +46,6 @@
 //     return catalog;
 // }
 
-// function renderCatalogTemplate(item, i) {
-//temlate
-// }
-
 class Card {
     constructor(img, prId, prName, prPrice) {
         this.productImg = img;
@@ -76,7 +72,6 @@ class Card {
     </div>`
     }
 }
-
 
 class Catalog {
     productList = []

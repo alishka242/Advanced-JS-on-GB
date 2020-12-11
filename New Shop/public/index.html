@@ -311,8 +311,11 @@
     <script src="../crs/components/index/catalog.js"></script>
 
     <script>
-    //    let basket = initBasket();
-    //     basket.init();
+        //    let basket = initBasket();
+        //     basket.init();
+        
+        let basket = new Basket();
+        basket.fetchProductArr().then(() => basket.render());
 
         let catalog = new Catalog();
         catalog.fetchProductArr().then(() => catalog.render());
