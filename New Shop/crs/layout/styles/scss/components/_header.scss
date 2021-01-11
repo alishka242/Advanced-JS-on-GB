@@ -194,8 +194,8 @@
                 padding: 20px 15px 20px 17px;
 
                 #basket_items {
-                    overflow: auto;
                     max-height: 220px;
+                    overflow: auto;
                 }
 
                 .selected-item {
@@ -208,6 +208,7 @@
                         width: 75px;
                         height: 85px;
                         display: block;
+                        margin-right: 15px;
                     }
 
                     div {
@@ -236,14 +237,21 @@
                             font-weight: 400;
                         }
                     }
+
+                    .fa-times-circle-o {
+                        border: none;
+                        width: 14px;
+                    }
                 }
 
-                .total {
+
+                #total {
                     @extend .flexRow;
                     width: 230px;
                     color: $baseTextColor;
                     font-size: 16px;
                     font-weight: 700;
+                    padding: 5px 0;
                 }
 
                 button {
@@ -253,10 +261,6 @@
                     font-size: 14px;
                     font-weight: 700;
                     text-transform: uppercase;
-
-                    &:active {
-                        background-color: $lightGray;
-                    }
                 }
 
                 .checkout-btn {

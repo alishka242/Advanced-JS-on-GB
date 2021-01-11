@@ -64,9 +64,8 @@
                         <div id="basket_items">
 
                         </div>
-                        <div class="total">
-                            <p>TOTAL</p>
-                            <p> &#36; <span id="basket_sum"></span></p>
+                        <div id="total">
+                            
                         </div>
                         <button class="checkout-btn">Checkout</button>
                         <button class="go-to-cart-btn">Go to cart</button>
@@ -132,7 +131,6 @@
                     <h1>THE BRAND</h1>
                     <h2>OF LUXERIOUS <span class="brand-h2_color">FASHION</span></h2>
                 </div>
-                <!--img src="../crs/accets/img/2_the-brand/the-brand.png" alt="photo"-->
             </div>
         </div>
     </section>
@@ -307,19 +305,8 @@
             </div>
         </div>
     </footer>
-    <script src="../crs/components/index/basket.js"></script>
     <script src="../crs/components/index/catalog.js"></script>
 
-    <script>
-        //    let basket = initBasket();
-        //     basket.init();
-        
-        let basket = new Basket();
-        basket.fetchProductArr().then(() => basket.render());
-
-        let catalog = new Catalog();
-        catalog.fetchProductArr().then(() => catalog.render());
-    </script>
 </body>
 
 </html>
