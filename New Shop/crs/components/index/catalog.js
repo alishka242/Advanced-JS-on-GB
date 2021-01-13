@@ -25,7 +25,9 @@ class Card {
 }
 
 class Catalog {
-    catalog = [];
+    constructor() {
+        this.catalog = [];
+    }
 
     fetchProductArr() {
         const BASE_URL = "https://raw.githubusercontent.com/alishka242/static/master/JSON/catalog.json";
@@ -55,6 +57,34 @@ class Catalog {
                 }
             });
         }
+    }
+}
+
+class Serch extends Catalog {
+    constructor() {
+        super();
+    }
+
+    getTemplateSerch(name, url, price) {
+        return `<div id="serchItem">
+        <a href="${url}" target="_blank">${name}</a>
+        <p>$${price}</p>
+        </div> 
+        `
+    }
+    renderSerch(serchStr = "") {
+        const list = this.catalog
+            .filter((i) => {
+                const serchRegex = new RegExp(serchStr, 'i');
+                if (serchRegex.test(i.productName)) {
+                    return true;
+                } else {
+                    return false;
+                }
+            })
+            .map(i => this.getTemplateSerch(i.productName, i.productImg, i.productPrice))
+            .join("");
+        document.querySelector('#serchDropId').innerHTML = list;
     }
 }
 
@@ -144,22 +174,41 @@ class Basket {
 }
 
 let basket = new Basket();
-document.querySelector('#total').innerHTML = basket.getTemplateTotal(0); 
+document.querySelector('#total').innerHTML = basket.getTemplateTotal(0);
 
 let catalog = new Catalog();
 catalog.fetchProductArr().then(() => catalog.render());
 
-document.querySelector('#basket-btn').addEventListener('click', e => {
-    const wrapperBasket = document.querySelector('#basket_inner');
-    wrapperBasket.classList.toggle('hidden');
+const serchItem = new Serch();
+serchItem.fetchProductArr().then(() => serchItem.renderSerch());
+
+const serchInput = document.getElementById('serch-input');
+
+const handleSerch = (value) => {
+    serchItem.renderSerch(value);
+}
+
+serchInput.addEventListener('input', (e) => {
+    handleSerch(e.target.value);
+
 });
 
 document.addEventListener('click', (event) => {
     let btnTargetName = event.target.name;
+    const serchDrop = document.querySelector('#serchDropId');
+    const wrapperBasket = document.querySelector('#basket_inner');
     let btnDatasetId = '';
+    //btnTargetName === 'plus' - оставляю на случай, когда мы будем увеличивать кол-во товара прямо в корзине
     if (btnTargetName === 'add' || btnTargetName === 'plus' || btnTargetName === 'delete') {
         btnDatasetId = event.target.dataset.id;
+    } else if (event.target.id == 'serch-input' || event.target.id == 'serchDropId'  || event.target.id == 'serchItem') {
+        serchDrop.classList.toggle('serchClosed');
+    } else if(event.target.id == 'basket-btn'){
+        wrapperBasket.classList.toggle('hidden');
+    }else if (event.target.id != 'serch-input' && event.target.id != 'serchDropId' && event.target.id != '#basket_inner') {
+        serchDrop.classList.add('serchClosed');
+        wrapperBasket.classList.add('hidden');
     }
-    // btnTargetName === 'plus' - оставляю на случай, когда мы будем увеличивать кол-во товара прямо в корзине
+    console.log(event.target.id)
     catalog._handelEvents(btnTargetName, btnDatasetId);
 });
