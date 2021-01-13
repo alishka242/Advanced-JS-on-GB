@@ -138,6 +138,34 @@
                         transition: 1s;
                     }
                 }
+
+                .serchDrop{
+                    overflow: auto;
+                    z-index: 555;
+                    min-height: 60px;
+                    max-height: 170px;
+                    width: 261px;
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    left: 474px;
+                    top: 71px;
+                    background-color: rgb(247, 244, 244);
+                    padding: 10px;
+                    line-height: 30px;
+                    a{
+                        text-decoration: none;
+                        color: black;
+
+                    }
+                    p{
+                        font-size: 13.5px;
+                        color: rgb(100, 100, 100);
+                    }
+                }
+                .serchClosed{
+                    display: none;
+                }
             }
         }
     }
