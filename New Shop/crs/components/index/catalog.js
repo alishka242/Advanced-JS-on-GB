@@ -97,8 +97,10 @@ class BasketItem extends Card {
         return `
         <div class="selected-item">
             <a href="#"><img src="${this.productImg}" alt="photo"></a>
-            <div>
-                <p><a href="#" class="item-name">${this.productName}</a></p>
+            <div id="item-info">
+                <p>
+                    <a href="#" class="item-name">${this.productName}</a>
+                </p>
                 <p class="item-stars">
                     <a href="#">
                         <i class="fa fa-star" aria-hidden="true"></i>
@@ -205,7 +207,11 @@ document.addEventListener('click', (event) => {
         serchDrop.classList.toggle('serchClosed');
     } else if(event.target.id == 'basket-btn'){
         wrapperBasket.classList.toggle('hidden');
-    }else if (event.target.id != 'serch-input' && event.target.id != 'serchDropId' && event.target.id != '#basket_inner') {
+    }else if (event.target.id != 'serch-input' && 
+            event.target.id != 'serchDropId' && 
+            event.target.id != 'basket_inner' && 
+            event.target.id != 'basket_items' &&
+            event.target.id != 'item-info') {
         serchDrop.classList.add('serchClosed');
         wrapperBasket.classList.add('hidden');
     }
