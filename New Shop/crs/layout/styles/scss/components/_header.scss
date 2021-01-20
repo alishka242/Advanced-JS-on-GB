@@ -28,7 +28,7 @@
                         cursor: pointer;
                     }
 
-                    .browse-btn {
+                    #browse-btn {
                         font-weight: 300;
                         color: $baseTextColor;
                         line-height: 32px;
@@ -51,7 +51,10 @@
                     }
 
                     .browse-nav {
-                        display: none;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        align-items: flex-start;
                         padding-left: 10px;
                         width: 262px;
                         height: 557px;
@@ -91,13 +94,9 @@
                         }
                     }
 
-                    &:focus-within .browse-nav {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-around;
-                        align-items: flex-start;
+                    .browseClose{
+                        display: none;
                     }
-
                 }
 
                 input {

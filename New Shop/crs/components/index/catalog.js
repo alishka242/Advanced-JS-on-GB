@@ -199,7 +199,10 @@ document.addEventListener('click', (event) => {
     let btnTargetName = event.target.name;
     const serchDrop = document.querySelector('#serchDropId');
     const wrapperBasket = document.querySelector('#basket_inner');
+    
     let btnDatasetId = '';
+    const browse = document.querySelector('#browse-drop');
+
     //btnTargetName === 'plus' - оставляю на случай, когда мы будем увеличивать кол-во товара прямо в корзине
     if (btnTargetName === 'add' || btnTargetName === 'plus' || btnTargetName === 'delete') {
         btnDatasetId = event.target.dataset.id;
@@ -207,13 +210,17 @@ document.addEventListener('click', (event) => {
         serchDrop.classList.toggle('serchClosed');
     } else if(event.target.id == 'basket-btn'){
         wrapperBasket.classList.toggle('hidden');
+    } else if(event.target.id == 'browse-btn'){
+        browse.classList.toggle('browseClose');
     }else if (event.target.id != 'serch-input' && 
             event.target.id != 'serchDropId' && 
             event.target.id != 'basket_inner' && 
             event.target.id != 'basket_items' &&
-            event.target.id != 'item-info') {
+            event.target.id != 'item-info' &&
+            event.target.id != 'browse-drop') {
         serchDrop.classList.add('serchClosed');
         wrapperBasket.classList.add('hidden');
+        browse.classList.add('browseClose');
     }
     console.log(event.target.id)
     catalog._handelEvents(btnTargetName, btnDatasetId);
